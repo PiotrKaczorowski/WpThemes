@@ -1,0 +1,206 @@
+@import 'reset';
+@import 'grid';
+$txtColor: #000000;
+$hoverColorLinks: silver;
+$hoverColor: yellow;
+$fontSizeExtraBig: 3em;
+$fontSizeBig: 1.5em;
+$fontSizeNormal: 18px;
+$fontSizeSmall: 14px;
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+body {
+    font: 300 20px Roboto, Arial, sans-serif;
+    color: $txtColor;     
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+
+}
+a:active {
+    color:$hoverColorLinks;
+}
+h1 {
+    font: 300 $fontSizeExtraBig Roboto, Arial, sans-serif;
+    text-transform: uppercase;
+}
+p {
+    font: 300 $fontSizeBig Roboto, Arial, sans-serif;
+}
+article header {
+    padding-bottom: 38px;
+} 
+    
+
+form input:focus,form textarea:focus { background-color: yellow; }
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Grid */
+.container {
+    max-width: 1358px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.page-header{
+    padding: 45px 0 42px 0;
+    
+    a.brand {
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        padding: 18px 0;
+        @media (min-width:768px) {
+            display: block;
+        }
+        display: flex;
+        justify-content: center; 
+        ul {
+            font: $fontSizeBig Nunito, Arial, sans-serif;  
+            text-transform: uppercase;
+            @media (min-width:1200px) {
+                float:right;  
+            }
+            font-weight: 900;
+                li {
+                    float: left;
+                    a {
+                        display: block;
+                        text-align: right;
+                        padding-left:50px;
+                        color:$txtColor;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+.page-section.slider-section {
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.page-section.gallery-section {
+    padding: 70px 0 76px 0;
+    a {
+        display: block;
+        overflow: hidden;
+        img{
+            white-space: nowrap;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+                opacity: 0.9;
+                filter: alpha(opacity=90);
+                overflow: hidden;
+            }    
+        }
+    }   
+}
+
+.page-footer {
+    background: #000000;
+    color:#ffffff;
+    padding:112px 0 103px 0;
+    h2{
+        font-size: $fontSizeBig;
+        text-transform: uppercase;
+    }
+    .contact-box {
+        p {
+            font-size: $fontSizeNormal;
+            font-weight: 300;
+            line-height: 1.6;
+            
+        }
+    }
+    .contact-form {
+        form{
+            display: block;
+            padding-left:10%;
+        }
+        input,textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding:10px 46px;
+            box-sizing: border-box;
+            font-size: $fontSizeSmall;
+            
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        .button{
+            background: red;
+            border-radius: 5px;
+            width: 32%;
+            padding: 10px;
+            text-align: center;
+            color: #ffffff;
+            margin: 0 auto;
+            &:hover {
+                color: $hoverColor;
+            }
+        }
+       
+    }
+}
+.page-section.baner-section {
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;   
+}
+article.page-articles {
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+.page-section.products-section {
+    padding: 100px 0;
+    aside  ul {
+        font: $fontSizeBig Roboto, Arial, sans-serif; 
+        font-weight: 300; 
+        padding: 20px 0;
+        li {
+            background: #000000;
+            
+            a {
+                display: block;
+                border-bottom: 1px solid #ffffff;
+                text-align: center;
+                color:#ffffff;
+                padding: 30px 10px;
+                &:hover {
+                    color:$hoverColorLinks;
+                }
+            }
+       
+        }
+     }
+     article {
+         padding:0 10px;
+     }
+     @media (min-width: 768px) {
+        article {
+            padding-left: 60px;
+        }
+     }
+}
